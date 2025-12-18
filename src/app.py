@@ -38,7 +38,7 @@ if uploaded_file is not None:
     st.write("File name:", uploaded_file.name)
     
     text = uploaded_file.getvalue().decode("utf-8-sig")
-<<<<<<< HEAD
+
 else:
     st.info("Please upload a CSV file")
     
@@ -47,14 +47,14 @@ reader = csv.DictReader(file_like)
 rows = list(reader)                  
 if st.checkbox("Preview first 5 rows"):
     st.write(rows[:5])
-=======
+
     file_like = StringIO(text)
     reader = csv.DictReader(file_like)
     rows = list(reader)
     if not rows:
         st.error("The uploaded CSV file has no rows.")
         st.stop()
->>>>>>> 654c71f (Add README and update project files)
+
 
     elif len(rows[0]) == 0:
         st.warning("No column headers detected in the CSV file.")
