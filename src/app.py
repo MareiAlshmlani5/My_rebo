@@ -32,6 +32,11 @@ if uploaded_file is not None:
 import csv
 from io import StringIO
 text = uploaded_file.getvalue().decode("utf-8-sig")
+if uploaded_file is not None:
+    text = uploaded_file.getvalue().decode("utf-8-sig")
+else:
+    st.info("Please upload a CSV file")
+    
 file_like = StringIO(text)
 reader = csv.DictReader(file_like)   # each row becomes a dict
 rows = list(reader)                  # list of dicts
