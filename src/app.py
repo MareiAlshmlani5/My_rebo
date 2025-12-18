@@ -38,8 +38,8 @@ else:
     st.info("Please upload a CSV file")
     
 file_like = StringIO(text)
-reader = csv.DictReader(file_like)   # each row becomes a dict
-rows = list(reader)                  # list of dicts
+reader = csv.DictReader(file_like)   
+rows = list(reader)                  
 if st.checkbox("Preview first 5 rows"):
     st.write(rows[:5])
 
