@@ -2,9 +2,7 @@ from .profiling import profile_rows
 from datetime import datetime
 
 def render_markdown(report: dict) -> str:
-    """
-    تحويل التقرير إلى صيغة Markdown
-    """
+    
     lines = []
     lines.append("# CSV Profiling Report")
     lines.append(f"Generated on: {datetime.now().isoformat(timespec='seconds')}\n")
@@ -21,7 +19,6 @@ def render_markdown(report: dict) -> str:
     lines.append("Missing values are: None, empty strings, 'NA', 'N/A', 'nan', and 'none' (case insensitive).")
     return "\n".join(lines)
 
-# اختبار مستقل
 if __name__ == "__main__":
     from .io import read_csv_rows
     rows = read_csv_rows("../data/sample.csv")
