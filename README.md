@@ -1,14 +1,18 @@
-\## Project Overview
-
-This project is a simple CSV profiling tool.
-
-It analyzes columns and detects data types automatically.
-
-The tool reports missing and unique values per column.
-
-It is built using Python and follows clean code principles.
-
-This project is part of a learning bootcamp.
-
-
-
+## CSV Profiler
+  Generate a profiling report for a CSV file.
+# Features
+  CLI: JSON + Markdown report 
+  Streamlit GUI: upload CSV + export reports
+ # Setup
+  uv venv -p 3.11 11 
+  uv pip install -r requirements.txt 
+## Run CLI 
+ # If you have a src/ folder: 
+ # Mac/Linux: export PYTHONPATH=src 
+ # Windows: $env:PYTHONPATH="src"
+  uv run python -m csv_profiler.cli profile data/sample.csv --out-dir outputs 
+## Run GUI 
+ # If you have a src/ folder: 
+ # Mac/Linux: export PYTHONPATH=src 
+ # Windows: $env: PYTHONPATH="src" 
+  uv run streamlit run app.py
