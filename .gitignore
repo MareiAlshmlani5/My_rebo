@@ -3,4 +3,4 @@ __pycache__/
 outputs/
 .DS_Store
 mini_exs2.py
-
+.env
